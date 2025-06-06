@@ -87,6 +87,7 @@ Editar
 }
 ```
 **💡 Observações**
+
 Certifique-se de que o modelo (modelo_rf) e a lista de colunas (colunas_treinadas.pkl) estão salvos corretamente.
 
 Os campos devem ter exatamente os nomes esperados pela API (case-sensitive).
@@ -94,13 +95,10 @@ Os campos devem ter exatamente os nomes esperados pela API (case-sensitive).
 A transformação get_dummies usada na predição deve ser igual à utilizada durante o treinamento do modelo.
 
 **📄 Licença**
+
 Este projeto é educacional e livre para uso acadêmico.
 
 Desenvolvido por Equipe 06 — IA e DataScience 🧠
-
-yaml
-Copiar
-Editar
 
 ---
 
