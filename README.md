@@ -47,11 +47,13 @@ Servidor rodando em: http://127.0.0.1:8000
 ### 4. Acesse o frontend
 Abra o arquivo forms.html no navegador (clicando 2x ou via Live Server do VS Code).
 
-📬 Endpoint da API
+### 📬 Endpoint da API
 POST /prever
-Recebe os dados de entrada e retorna a classificação prevista:
 
-Corpo da requisição (JSON):
+ **Recebe os dados de entrada e retorna a classificação prevista:**
+
+**Corpo da requisição (JSON):**
+```
 json
 Copiar
 Editar
@@ -73,21 +75,25 @@ Editar
   "CALC": "Sometimes",
   "MTRANS": "Public_Transportation"
 }
-Resposta esperada:
+```
+
+**Resposta esperada:**
+```
 json
 Copiar
 Editar
 {
   "classificacao_obesidade": "Overweight_Level_I"
 }
-💡 Observações
+```
+**💡 Observações**
 Certifique-se de que o modelo (modelo_rf) e a lista de colunas (colunas_treinadas.pkl) estão salvos corretamente.
 
 Os campos devem ter exatamente os nomes esperados pela API (case-sensitive).
 
 A transformação get_dummies usada na predição deve ser igual à utilizada durante o treinamento do modelo.
 
-📄 Licença
+**📄 Licença**
 Este projeto é educacional e livre para uso acadêmico.
 
 Desenvolvido por Equipe 06 — IA e DataScience 🧠
