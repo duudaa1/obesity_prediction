@@ -1,0 +1,194 @@
+/* RESET E VARIÁVEIS */
+:root {
+  --primary: #2e7d32;
+  --secondary: #81c784;
+  --accent: #ff8f00;
+  --light: #f5f5f5;
+  --dark: #212121;
+  --danger: #c62828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+}
+
+/* TÍTULO */
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+/* FORMULÁRIO */
+#obesityForm {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* INPUTS */
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+/* RADIO - ESTILO PILL */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.radio-pill {
+  background-color: var(--light);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+  border: 1px solid #ccc;
+}
+
+.radio-pill:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.radio-pill input[type="radio"] {
+  margin-right: 6px;
+  accent-color: var(--primary);
+}
+
+/* BOTÃO */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* RESULTADO */
+/* POPUP de Resultado */
+#resultado.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid var(--primary);
+  border-left: 8px solid var(--accent);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 90%;
+  width: 400px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+#resultado.popup p {
+  font-size: 1rem;
+  color: var(--dark);
+  margin: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--danger);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: var(--accent);
+}
+
+
+/* VALIDAÇÃO */
+input:invalid {
+  border-color: var(--accent);
+}
+
+input:valid {
+  border-color: var(--primary);
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .radio-group {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}

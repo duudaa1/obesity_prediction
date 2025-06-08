@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obesity Prediction</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Obesity Prediction</h1>
+
+    <form id="obesityForm" autocomplete="off">
+      <div class="form-group">
+        <label title="Gênero biológico do usuário">Gender:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Masculino"><input type="radio" name="Gender" value="Male" required> Male</label>
+          <label class="radio-pill" title="Feminino"><input type="radio" name="Gender" value="Female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label title="Idade atual do usuário">Age:</label>
+        <input type="number" name="Age" min="0" required title="Informe sua idade em anos completos">
+      </div>
+
+      <div class="form-group">
+        <label title="Altura em centímetros">Height (in cm):</label>
+        <input type="number" step="0.01" id="height" name="Height" required title="Altura em centímetros">
+      </div>
+
+      <div class="form-group">
+        <label title="Peso corporal em quilogramas">Weight (kg):</label>
+        <input type="number" step="0.001" id="weight" name="Weight" min="0" required title="Informe seu peso em quilos">
+      </div>
+
+      <div class="form-group">
+        <label title="Você tem histórico familiar de obesidade?">Family History of Obesity:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Sim, histórico familiar positivo"><input type="radio" name="family_history" value="yes" required> Yes</label>
+          <label class="radio-pill" title="Não, sem histórico familiar"><input type="radio" name="family_history" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label title="Você consome alimentos calóricos com frequência?">Frequent High Caloric Food:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Sim, frequentemente"><input type="radio" name="FAVC" value="yes" required> Yes</label>
+          <label class="radio-pill" title="Não, raramente ou nunca"><input type="radio" name="FAVC" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label title="Frequência de consumo de vegetais, de 1 a 3">Frequency of Vegetable Consumption (1–3):</label>
+        <input type="number" step="1" min="1" max="3" name="FCVC" required title="1 = baixo, 3 = alto consumo de vegetais">
+      </div>
+
+      <div class="form-group">
+        <label title="Número de refeições principais diárias">Number of Main Meals:</label>
+        <input type="number" name="NCP" min="1" required title="Informe quantas refeições principais você costuma fazer por dia">
+      </div>
+
+      <div class="form-group">
+        <label title="Você costuma fazer lanches entre as refeições?">Food Between Meals:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Não faz lanches"><input type="radio" name="CAEC" value="no" required> No</label>
+          <label class="radio-pill" title="Às vezes"><input type="radio" name="CAEC" value="Sometimes"> Sometimes</label>
+          <label class="radio-pill" title="Frequentemente"><input type="radio" name="CAEC" value="Frequently"> Frequently</label>
+          <label class="radio-pill" title="Sempre"><input type="radio" name="CAEC" value="Always"> Always</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label title="Você é fumante?">Smoke:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Sim, sou fumante"><input type="radio" name="SMOKE" value="yes" required> Yes</label>
+          <label class="radio-pill" title="Não sou fumante"><input type="radio" name="SMOKE" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label title="Consumo diário de água em litros">Daily Water Intake (liters):</label>
+        <input type="number" step="0.1" name="CH2O" min="0" required title="Informe em litros por dia">
+      </div>
+
+      <div class="form-group">
+        <label title="Você controla seu consumo calórico?">Monitor Caloric Intake:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Sim, monitoro"><input type="radio" name="SCC" value="yes" required> Yes</label>
+          <label class="radio-pill" title="Não monitoro"><input type="radio" name="SCC" value="no"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label title="Quantidade de atividade física por semana (em horas)">Physical Activity Frequency (hours):</label>
+        <input type="number" step="0.1" name="FAF" min="0" required title="Informe a média semanal de atividade física">
+      </div>
+
+      <div class="form-group">
+        <label title="Tempo em horas de uso de tecnologias para entretenimento">Technology Use for Entertainment (hours):</label>
+        <input type="number" step="0.1" name="TUE" min="0" required title="Horas por dia usando celular, TV, computador para lazer">
+      </div>
+
+      <div class="form-group">
+        <label title="Você consome bebidas alcoólicas?">Alcohol Consumption:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Não consumo"><input type="radio" name="CALC" value="no" required> No</label>
+          <label class="radio-pill" title="Às vezes consumo"><input type="radio" name="CALC" value="Sometimes"> Sometimes</label>
+          <label class="radio-pill" title="Frequentemente consumo"><input type="radio" name="CALC" value="Frequently"> Frequently</label>
+          <label class="radio-pill" title="Sempre consumo"><input type="radio" name="CALC" value="Always"> Always</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label title="Principal meio de transporte utilizado">Main Transportation:</label>
+        <div class="radio-group">
+          <label class="radio-pill" title="Deslocamento a pé"><input type="radio" name="MTRANS" value="Walking" required> Walking</label>
+          <label class="radio-pill" title="Uso de bicicleta"><input type="radio" name="MTRANS" value="Bike"> Bike</label>
+          <label class="radio-pill" title="Transporte público"><input type="radio" name="MTRANS" value="Public_Transportation"> Public Transport</label>
+          <label class="radio-pill" title="Uso de carro particular"><input type="radio" name="MTRANS" value="Automobile"> Automobile</label>
+          <label class="radio-pill" title="Motocicleta"><input type="radio" name="MTRANS" value="Motorbike"> Motorbike</label>
+        </div>
+      </div>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="resultado" class="popup" style="display: none;">
+      <button class="close-btn" onclick="document.getElementById('resultado').style.display='none'">×</button>
+      <p id="resultado-texto"></p>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
