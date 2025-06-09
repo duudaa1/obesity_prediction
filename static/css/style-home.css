@@ -1,10 +1,10 @@
 :root {
-    --primary: #2e7d32;
-    --secondary: #81c784;
-    --accent: #ff8f00;
+    --primary: #238E7B;
+    --secondary: #70262D;
+    --accent: #DBA668;
     --light: #f5f5f5;
     --dark: #212121;
-    --danger: #c62828;
+    --danger: #FFD9B3;
 }
 
 * {
@@ -16,7 +16,7 @@
 
 body {
     background-color: #f6fdf6;
-    color: #333;
+    color: var(--dark);
     line-height: 1.6;
     padding: 0px;
 }
@@ -86,7 +86,7 @@ header {
 }
 
 .btn-highlight:hover {
-    background-color: #ff6f00;
+    background-color: var(--primary);
 }
 
 .container {
@@ -97,15 +97,17 @@ header {
 }
 
 .about-section {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  margin: 2.5rem auto;
-  padding: 2rem 0; /* removido o padding lateral */
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    margin: 2.5rem auto;
+    padding: 2rem 0;
+    /* removido o padding lateral */
 }
 
 .about-section .container {
-  padding: 0 2.5rem; /* aplicado padding interno lateral só aqui */
+    padding: 0 2.5rem;
+    /* aplicado padding interno lateral só aqui */
 }
 
 .about-section h2 {
@@ -118,17 +120,17 @@ header {
 }
 
 .about-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .about-text {
     flex: 1 1 55%;
     font-size: 1rem;
-    color: #333;
+    color: var(--dark);
     line-height: 1.6;
 }
 
@@ -172,7 +174,7 @@ header {
 .about-text {
     flex: 1 1 55%;
     font-size: 1rem;
-    color: #333;
+    color: var(--dark);
     line-height: 1.6;
 }
 
@@ -188,7 +190,7 @@ header {
 }
 
 .footer {
-    background-color: #2E7D32;
+    background-color: var(--primary);
 }
 
 h1 {
@@ -228,7 +230,7 @@ p {
 }
 
 .btn:hover {
-    background-color: #ff6f00;
+    background-color: var(--primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -238,7 +240,7 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: #1b5e20;
+    background-color: var(--primary);
 }
 
 .card {
@@ -306,7 +308,7 @@ input {
 
 .warning {
     background-color: #fff8e1;
-    color: #ff8f00;
+    color: var(--primary);
 }
 
 .danger {
@@ -401,15 +403,15 @@ footer {
 }
 
 .nutrition-card {
-    border-top: 5px solid #4CAF50;
+    border-top: 5px solid var(--secondary);
 }
 
 .nutrition-card .card-header h3 {
-    color: #2E7D32;
+    color: var(--primary);
 }
 
 .fitness-card {
-    border-top: 5px solid #2196F3;
+    border-top: 5px solid #1670ba;
 }
 
 .fitness-card .card-header h3 {
@@ -417,25 +419,25 @@ footer {
 }
 
 .mental-card {
-    border-top: 5px solid #9C27B0;
+    border-top: 5px solid #600e6e;
 }
 
 .mental-card .card-header h3 {
-    color: #7B1FA2;
+    color: #5b1379;
 }
 
 .warning-section {
     background-color: #FFF8E1;
     padding: 12px;
     border-radius: 8px;
-    border-left: 4px solid #FFA000;
+    border-left: 4px solid var(--primary);
 }
 
 .tips-section {
     background-color: #E8F5E9;
     padding: 12px;
     border-radius: 8px;
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid var(--primary);
 }
 
 .risk-list,
@@ -464,7 +466,7 @@ footer {
 
 .tips-list li::before {
     content: "✓";
-    color: #4CAF50;
+    color: var(--secondary);
     font-weight: bold;
     margin-right: 10px;
 }
@@ -482,14 +484,14 @@ footer {
 .hover-card {
     position: relative;
     background-color: #ffffff;
-    border-left: 6px solid #3b913b;
+    border-left: 6px solid var(--secondary);
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease;
     overflow: hidden;
     min-height: 180px;
-    color: #1b1b1b;
+    color: #150000;
     font-weight: 500;
     height: 100%;
 }
@@ -516,14 +518,14 @@ footer {
 .card-text .cite {
     margin-top: 15px;
     font-size: 0.85rem;
-    color: #666;
+    color: var(--dark);
 }
 
 .hover-card .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(59, 145, 59, 0.92);
+    background: var(--primary);
     color: #fff;
     height: 100%;
     width: 100%;
